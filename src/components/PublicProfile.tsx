@@ -70,7 +70,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
 
        <footer className="w-full p-4 bg-transparent">
         <div className="text-center">
-          <p className="text-sm text-muted-foreground">{footerText}</p>
+          <p className="text-sm text-foreground/70">{footerText}</p>
         </div>
       </footer>
     </div>
