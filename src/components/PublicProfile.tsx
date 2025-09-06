@@ -55,9 +55,6 @@ export default function PublicProfile({ content }: PublicProfileProps) {
 
       <footer className="w-full p-4 text-center">
         <p className="text-sm text-muted-foreground">{footerText}</p>
-         <Link href="/admin" className="text-sm text-primary hover:underline mt-2 inline-block">
-          Admin Panel
-        </Link>
       </footer>
     </div>
   );
