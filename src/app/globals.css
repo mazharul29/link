@@ -84,8 +84,28 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    background-color: hsl(var(--background));
-    background-image: radial-gradient(ellipse 80% 50% at 50% -20%, hsla(259, 53%, 40%, 0.3), transparent);
+    background-color: #3a2f7c;
+    background-image: 
+      radial-gradient(ellipse 50% 40% at 50% -10%, hsla(280, 100%, 60%, 0.3), transparent),
+      radial-gradient(ellipse 80% 60% at 50% -20%, hsla(259, 53%, 40%, 0.5), transparent),
+      linear-gradient(to bottom, #2d2466, #1c1642);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 15vw;
+    height: 15vw;
+    max-width: 120px;
+    max-height: 120px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
