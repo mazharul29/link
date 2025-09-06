@@ -25,7 +25,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-foreground/10 backdrop-blur-sm rounded-b-lg"></div>
       <main className="flex flex-1 flex-col items-center justify-center p-4 pt-20 text-center">
         <div className="w-full max-w-md">
-           <div className="mb-12">
+           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {profile.avatarUrl && (
               <Image
                 src={profile.avatarUrl}
@@ -44,16 +44,17 @@ export default function PublicProfile({ content }: PublicProfileProps) {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            {links.map((link) => (
+            {links.map((link, index) => (
               <a
                 key={link.id}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'group relative flex aspect-square flex-col items-center justify-center gap-4 rounded-[32px] p-4 text-center text-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50',
+                  'group relative flex aspect-square flex-col items-center justify-center gap-4 rounded-[32px] p-4 text-center text-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50 animate-fade-in-up',
                   platformGradients[link.platform] || 'bg-gray-700'
                 )}
+                style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
@@ -68,7 +69,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
         </div>
       </main>
 
-       <footer className="w-full p-4">
+       <footer className="w-full p-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
         <div className="text-center">
           <p className="text-sm text-foreground/70">{footerText}</p>
         </div>
