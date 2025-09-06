@@ -9,15 +9,21 @@ interface PublicProfileProps {
 }
 
 export default function PublicProfile({ content }: PublicProfileProps) {
-  const { profile, links, heading, footerText, logoUrl } = content;
+  const { links, footerText, logoUrl } = content;
 
   const platformGradients: { [key: string]: string } = {
     instagram: 'instagram-gradient',
     tiktok: 'tiktok-gradient',
   };
 
+  const platformText: { [key: string]: string } = {
+    instagram: 'Instagram',
+    tiktok: 'TikTok',
+  }
+
   return (
     <div className="flex min-h-full w-full flex-col bg-transparent font-sans text-foreground">
+       <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-foreground/10 backdrop-blur-sm rounded-b-lg"></div>
       <main className="flex flex-1 flex-col items-center justify-center p-4 pt-20 text-center">
         <div className="w-full max-w-md">
            <div className="mb-12">
@@ -42,10 +48,10 @@ export default function PublicProfile({ content }: PublicProfileProps) {
                 )}
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-black/20">
-                    <SocialIcon platform={link.platform} className="h-8 w-8" />
+                    <SocialIcon platform={link.platform} className={cn('h-8 w-8', link.platform === 'tiktok' ? 'text-black' : 'text-white')} />
                 </div>
-                <span className="font-semibold capitalize">
-                  {link.platform === 'website' ? 'My Site' : link.platform}
+                <span className="font-semibold">
+                  {platformText[link.platform] || link.platform}
                 </span>
               </a>
             ))}
@@ -72,3 +78,5 @@ export default function PublicProfile({ content }: PublicProfileProps) {
     </div>
   );
 }
+
+    
