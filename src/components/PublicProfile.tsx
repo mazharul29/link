@@ -10,7 +10,7 @@ interface PublicProfileProps {
 }
 
 export default function PublicProfile({ content }: PublicProfileProps) {
-  const { links, footerText, logoUrl, profile } = content;
+  const { links, footerText, profile } = content;
 
   const platformGradients: { [key: string]: string } = {
     instagram: 'instagram-gradient',
@@ -70,17 +70,6 @@ export default function PublicProfile({ content }: PublicProfileProps) {
       </main>
 
        <footer className="w-full p-4">
-        {logoUrl && (
-          <div className="absolute bottom-4 left-4">
-            <Image
-              src={logoUrl}
-              alt="Logo"
-              width={40}
-              height={40}
-              className="rounded-md"
-            />
-          </div>
-        )}
         <div className="text-center">
           <p className="text-sm text-muted-foreground">{footerText}</p>
         </div>

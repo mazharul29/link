@@ -21,15 +21,6 @@ export function AppearanceEditor() {
         <p className="text-sm text-muted-foreground">Customize the look of your site.</p>
       </div>
       <div className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="logoUrl">Logo URL</Label>
-          <Input
-            id="logoUrl"
-            value={draftContent.logoUrl}
-            onChange={(e) => handleChange('logoUrl', e.target.value)}
-            placeholder="https://example.com/logo.png"
-          />
-        </div>
          <div className="space-y-2">
           <Label htmlFor="footerText">Footer Text</Label>
           <Input

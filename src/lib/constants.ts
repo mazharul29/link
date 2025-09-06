@@ -1,7 +1,6 @@
 import type { SiteContent, SocialPlatform } from './types';
 
 export const INITIAL_SITE_CONTENT: SiteContent = {
-  logoUrl: 'https://picsum.photos/40/40',
   profile: {
     name: 'Alex Doe',
     bio: 'Digital creator, minimalist, and coffee enthusiast. Sharing my journey one link at a time.',

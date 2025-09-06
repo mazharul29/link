@@ -20,7 +20,6 @@ export type ProfileData = {
 };
 
 export type SiteContent = {
-  logoUrl: string;
   profile: ProfileData;
   links: SocialLink[];
   heading: string;
