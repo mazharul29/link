@@ -132,11 +132,11 @@ body {
 }
 
 .instagram-gradient {
-  background: linear-gradient(135deg, #FF8259, #E0218A);
+  background: linear-gradient(135deg, #e0218a, #ff8259);
 }
 
 .tiktok-gradient {
-  background: linear-gradient(135deg, #00F2EA, #0162A3);
+  background: linear-gradient(135deg, #0162a3, #00f2ea);
 }
 
 /* Admin Panel Backgrounds */

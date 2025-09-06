@@ -53,14 +53,15 @@ export default function PublicProfile({ content }: PublicProfileProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'group flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-4 text-center text-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50',
+                  'group relative flex aspect-square flex-col items-center justify-center gap-4 rounded-[32px] p-4 text-center text-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50',
                   platformGradients[link.platform] || 'bg-gray-700'
                 )}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-black/20">
+                 <div className="absolute inset-0 bg-black/10"></div>
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
                     <SocialIcon platform={link.platform} className={cn('h-8 w-8 text-white')} />
                 </div>
-                <span className="font-semibold">
+                <span className="relative font-semibold text-lg">
                   {platformText[link.platform] || link.platform}
                 </span>
               </a>
