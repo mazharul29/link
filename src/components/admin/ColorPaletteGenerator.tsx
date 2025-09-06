@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { generateColorPalette } from '@/ai/flows/generate-color-palette';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Copy } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -71,17 +71,19 @@ export function ColorPaletteGenerator() {
         {palette.length > 0 && (
           <div className="mt-4">
             <h4 className="font-medium mb-2">Suggested Palette:</h4>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-4 flex-wrap">
               {palette.map((color) => (
-                <div
-                  key={color}
-                  className="group relative h-16 w-16 rounded-md cursor-pointer"
-                  style={{ backgroundColor: color }}
-                  onClick={() => handleCopy(color)}
-                >
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-xs font-mono">{color}</span>
+                <div key={color} className="flex flex-col items-center gap-2">
+                    <div
+                      className="group relative h-16 w-16 rounded-md cursor-pointer border"
+                      style={{ backgroundColor: color }}
+                      onClick={() => handleCopy(color)}
+                    >
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-md">
+                            <Copy className="h-6 w-6 text-white" />
+                        </div>
                     </div>
+                    <span className="text-sm font-mono text-muted-foreground">{color}</span>
                 </div>
               ))}
             </div>
