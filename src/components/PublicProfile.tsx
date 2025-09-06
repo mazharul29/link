@@ -22,7 +22,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
 
   return (
     <div className="flex min-h-full w-full flex-col bg-transparent font-sans text-foreground">
-       <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-foreground/10 backdrop-blur-sm rounded-b-lg"></div>
+       <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-foreground/10 backdrop-blur-sm rounded-b-lg animate-fade-in-up"></div>
       <main className="flex flex-1 flex-col items-center justify-center p-4 pt-20 text-center">
         <div className="w-full max-w-md">
            <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -37,9 +37,9 @@ export default function PublicProfile({ content }: PublicProfileProps) {
             )}
             <h1 className="mt-4 text-3xl font-bold tracking-wider text-white">{profile.name}</h1>
             <div className="mt-4 flex justify-center space-x-2">
-              <div className="h-1 w-8 rounded-full bg-pink-500"></div>
-              <div className="h-1 w-8 rounded-full bg-purple-500"></div>
-              <div className="h-1 w-8 rounded-full bg-cyan-400"></div>
+              <div className="h-1 w-8 rounded-full bg-pink-500 animate-fade-in-up" style={{ animationDelay: '0.3s' }}></div>
+              <div className="h-1 w-8 rounded-full bg-purple-500 animate-fade-in-up" style={{ animationDelay: '0.4s' }}></div>
+              <div className="h-1 w-8 rounded-full bg-cyan-400 animate-fade-in-up" style={{ animationDelay: '0.5s' }}></div>
             </div>
           </div>
 
@@ -54,9 +54,9 @@ export default function PublicProfile({ content }: PublicProfileProps) {
                   'group relative flex aspect-square flex-col items-center justify-center gap-4 rounded-[32px] p-4 text-center text-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50 animate-fade-in-up',
                   platformGradients[link.platform] || 'bg-gray-700'
                 )}
-                style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
               >
-                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="absolute inset-0 bg-black/10 rounded-[32px]"></div>
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                     <SocialIcon platform={link.platform} className="h-8 w-8 text-white" />
                 </div>
@@ -69,7 +69,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
         </div>
       </main>
 
-       <footer className="w-full p-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+       <footer className="w-full p-4 animate-fade-in-up bg-transparent" style={{ animationDelay: '1s' }}>
         <div className="text-center">
           <p className="text-sm text-foreground/70">{footerText}</p>
         </div>
