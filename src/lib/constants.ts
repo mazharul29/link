@@ -22,6 +22,7 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
   heading: 'Welcome to My Digital Space',
   subheading: 'Find all my important links below. Connect with me!',
   footerText: `© ${new Date().getFullYear()} Alex Doe. All Rights Reserved.`,
+  adminBackground: 'admin-bg-1',
 };
 
 export const SOCIAL_PLATFORMS: SocialPlatform[] = [
@@ -30,4 +31,17 @@ export const SOCIAL_PLATFORMS: SocialPlatform[] = [
   'tiktok',
   'linkedin',
   'youtube',
+];
+
+export const ADMIN_BACKGROUNDS = [
+  { value: 'admin-bg-1', name: 'Subtle Grid' },
+  { value: 'admin-bg-2', name: 'Polka Dots' },
+  { value: 'admin-bg-3', name: 'Blueprint' },
+  { value: 'admin-bg-4', name: 'Cosmic' },
+  { value: 'admin-bg-5', name: 'Crosses' },
+  { value: 'admin-bg-6', name: 'Pinstripes' },
+  { value: 'admin-bg-7', name: 'Wigwam' },
+  { value: 'admin-bg-8', name: 'Circuit' },
+  { value: 'admin-bg-9', name: 'Bubbles' },
+  { value: 'admin-bg-10', name: 'Graph Paper' },
 ];

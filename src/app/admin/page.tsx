@@ -22,7 +22,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="flex h-screen w-full font-sans admin-bg">
+    <div className={`flex h-screen w-full font-sans ${draftContent.adminBackground}`}>
       <div className="flex w-[550px] flex-shrink-0 flex-col border-r border-border bg-background/80 backdrop-blur-sm">
         <AdminHeader />
         <div className="flex-1 overflow-y-auto">

@@ -26,4 +26,5 @@ export type SiteContent = {
   heading: string;
   subheading: string;
   footerText: string;
+  adminBackground: string;
 };

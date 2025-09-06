@@ -94,13 +94,6 @@ body {
     animation: move-gradient 20s ease-in-out infinite alternate;
   }
 
-  .admin-bg {
-    background-color: #1a1a2e;
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
-    background-size: 20px 20px;
-  }
-
   body::before {
     content: '';
     position: absolute;
@@ -144,4 +137,95 @@ body {
 
 .tiktok-gradient {
   background: linear-gradient(135deg, #00F2EA, #0162A3);
+}
+
+/* Admin Panel Backgrounds */
+.admin-bg-1 {
+  background-color: #1a1a2e;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+.admin-bg-2 {
+  background-color: #1a1a2e;
+  background-image: radial-gradient(white 1px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -19px -19px;
+}
+.admin-bg-3 {
+  background-color: #1a1a2e;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+}
+.admin-bg-4 {
+    background-color: #1a1a2e;
+    background-image:  
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),  
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%),  
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+}
+.admin-bg-5 {
+  background-color: #1a1a2e;
+  background-image:
+  linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+  linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+  linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+  linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+  background-size:20px 20px;
+}
+.admin-bg-6 {
+  background-color: #1a1a2e;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px);
+}
+.admin-bg-7 {
+  background-color: #1a1a2e;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 22px, transparent 22px),
+    linear-gradient(225deg, rgba(255,255,255,0.05) 22px, transparent 22px),
+    linear-gradient(315deg, rgba(255,255,255,0.05) 22px, transparent 22px),
+    linear-gradient(45deg, rgba(255,255,255,0.05) 22px, transparent 22px);
+  background-size: 64px 64px;
+  background-color: #1a1a2e;
+}
+.admin-bg-8 {
+  background-color: #1a1a2e;
+  background-image:  
+    linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 2px, transparent 2px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+.admin-bg-9 {
+  background-color: #1a1a2e;
+  background-image:  
+  radial-gradient(closest-side, rgba(255,255,255,0.1), transparent),
+  radial-gradient(closest-side, rgba(255,255,255,0.08), transparent),
+  radial-gradient(closest-side, rgba(255,255,255,0.06), transparent),
+  radial-gradient(closest-side, rgba(255,255,255,0.04), transparent),
+  radial-gradient(closest-side, rgba(255,255,255,0.02), transparent);
+  background-size: 
+    110px 110px,
+    130px 130px,
+    150px 150px,
+    170px 170px,
+    190px 190px;
+  background-position: 
+    0 0,
+    40px 60px,
+    -20px 30px,
+    80px 100px,
+    130px 140px;
+}
+.admin-bg-10 {
+  background-color: #1a1a2e;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
 }
