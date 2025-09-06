@@ -9,19 +9,9 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
   },
   links: [
     {
-      id: '1',
-      platform: 'twitter',
-      url: 'https://twitter.com/your-profile',
-    },
-    {
       id: '2',
       platform: 'instagram',
       url: 'https://instagram.com/your-profile',
-    },
-    {
-      id: '3',
-      platform: 'github',
-      url: 'https://github.com/your-profile',
     },
     {
       id: '4',
@@ -36,10 +26,8 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
 
 export const SOCIAL_PLATFORMS: SocialPlatform[] = [
   'website',
-  'twitter',
   'instagram',
   'tiktok',
-  'github',
   'linkedin',
   'youtube',
 ];
