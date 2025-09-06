@@ -3,6 +3,7 @@ import {
   Youtube,
   Link,
   Twitter,
+  Github,
 } from 'lucide-react';
 import type { SocialPlatform } from '@/lib/types';
 
@@ -45,7 +46,7 @@ const iconMap: Record<SocialPlatform, React.ElementType> = {
   youtube: Youtube,
   website: Link,
   twitter: Twitter,
-  github: Link, // Placeholder
+  github: Github,
 };
 
 export default function SocialIcon({

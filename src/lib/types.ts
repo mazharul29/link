@@ -22,8 +22,6 @@ export type ProfileData = {
 export type SiteContent = {
   profile: ProfileData;
   links: SocialLink[];
-  heading: string;
-  subheading: string;
   footerText: string;
   adminBackground: string;
 };

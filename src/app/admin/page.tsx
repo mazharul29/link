@@ -46,7 +46,7 @@ export default function AdminPage() {
             </TabsContent>
             <TabsContent value="appearance" className="mt-6 space-y-8">
               <AppearanceEditor />
-              <div className="space-y-4">
+               <div className="space-y-4">
                 <h3 className="text-lg font-medium flex items-center"><Palette className="mr-2 h-5 w-5"/> Color Palette Tool</h3>
                 <p className="text-sm text-muted-foreground">
                   Generate a color palette based on a starting color.

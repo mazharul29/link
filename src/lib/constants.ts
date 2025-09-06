@@ -4,7 +4,7 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
   profile: {
     name: 'Alex Doe',
     bio: 'Digital creator, minimalist, and coffee enthusiast. Sharing my journey one link at a time.',
-    avatarUrl: 'https://picsum.photos/100/100',
+    avatarUrl: 'https://picsum.photos/seed/alex-doe/100/100',
   },
   links: [
     {
@@ -18,8 +18,6 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
       url: 'https://tiktok.com/@your-profile',
     },
   ],
-  heading: 'Welcome to My Digital Space',
-  subheading: 'Find all my important links below. Connect with me!',
   footerText: `© ${new Date().getFullYear()} Alex Doe. All Rights Reserved.`,
   adminBackground: 'admin-bg-1',
 };
