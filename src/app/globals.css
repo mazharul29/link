@@ -229,3 +229,121 @@ body {
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
 }
+
+.admin-bg-11 {
+  background: linear-gradient(270deg, #1a1a2e, #2a2a5e, #1a1a2e);
+  background-size: 600% 600%;
+  animation: admin-gradient-animation 16s ease infinite;
+}
+
+.admin-bg-12 {
+  background-color: #1a1a2e;
+  overflow: hidden;
+  position: relative;
+}
+.admin-bg-12::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent 30%
+  );
+  animation: rotate-cone 10s linear infinite;
+}
+
+.admin-bg-13 {
+  background-color: #0f0f1e;
+  background-image:
+    radial-gradient(ellipse at top, transparent 0%, rgba(120, 100, 255, 0.1)),
+    radial-gradient(ellipse at bottom, rgba(100, 120, 255, 0.1) 0%, transparent);
+}
+
+.admin-bg-14 {
+  background-color: #1a1a2e;
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1px, transparent 1px, transparent 10px),
+    repeating-linear-gradient(22.5deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1px, transparent 1px, transparent 10px);
+  background-size: 50px 50px;
+}
+
+.admin-bg-15 {
+  background:
+    linear-gradient(324deg, #03001e 30%, #7303c0 70%, #ec38bc 100%),
+    linear-gradient(124deg, #fdeff9 10%, #03001e 50%, #7303c0 90%);
+  background-size: 200% 200%;
+  animation: admin-gradient-animation 25s ease infinite;
+}
+
+.admin-bg-16 {
+  background-color: #1a1a2e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%232a2a5e' fill-opacity='0.6'%3E%3Crect x='0' y='0' width='10' height='10'/%3E%3C/g%3E%3C/svg%3E");
+  animation: move-bg 30s linear infinite;
+}
+
+.admin-bg-17 {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent),
+    linear-gradient(0deg, #1a1a2e 0%, #202040 100%);
+}
+
+.admin-bg-18 {
+  background-color: #1a1a2e;
+  background-image: 
+    linear-gradient(45deg, #2a2a5e 25%, transparent 25%), 
+    linear-gradient(-45deg, #2a2a5e 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #2a2a5e 75%),
+    linear-gradient(-45deg, transparent 75%, #2a2a5e 75%);
+  background-size: 60px 60px;
+  animation: move-bg 20s linear infinite;
+}
+
+.admin-bg-19 {
+  background-color: #1a1a2e;
+  background: 
+    radial-gradient(circle, transparent 20%, #1a1a2e 20%, #1a1a2e 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, #1a1a2e 20%, #1a1a2e 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#2a2a5e 2px, transparent 2px) 0 -1px,
+    linear-gradient(90deg, #2a2a5e 2px, #1a1a2e 2px) -1px 0;
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+.admin-bg-20 {
+  background: #1a1a2e;
+  overflow: hidden;
+  position: relative;
+}
+.admin-bg-20::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: scan-line 8s linear infinite;
+}
+
+
+@keyframes admin-gradient-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes rotate-cone {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes move-bg {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes scan-line {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
