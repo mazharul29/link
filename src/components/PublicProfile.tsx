@@ -3,13 +3,14 @@ import type { SiteContent } from '@/lib/types';
 import SocialIcon from './SocialIcon';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { Twitter } from 'lucide-react';
 
 interface PublicProfileProps {
   content: SiteContent;
 }
 
 export default function PublicProfile({ content }: PublicProfileProps) {
-  const { links, footerText, logoUrl } = content;
+  const { links, footerText, logoUrl, profile } = content;
 
   const platformGradients: { [key: string]: string } = {
     instagram: 'instagram-gradient',
@@ -27,7 +28,16 @@ export default function PublicProfile({ content }: PublicProfileProps) {
       <main className="flex flex-1 flex-col items-center justify-center p-4 pt-20 text-center">
         <div className="w-full max-w-md">
            <div className="mb-12">
-            <h1 className="text-3xl font-bold tracking-wider text-white">CONNECT WITH ME</h1>
+             {profile.avatarUrl && (
+              <Image
+                src={profile.avatarUrl}
+                alt={profile.name}
+                width={100}
+                height={100}
+                className="mx-auto rounded-full border-4 border-white/20 shadow-lg"
+              />
+            )}
+            <h1 className="mt-4 text-3xl font-bold tracking-wider text-white">{profile.name}</h1>
             <div className="mt-4 flex justify-center space-x-2">
               <div className="h-1 w-8 rounded-full bg-pink-500"></div>
               <div className="h-1 w-8 rounded-full bg-purple-500"></div>
@@ -48,7 +58,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
                 )}
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-black/20">
-                    <SocialIcon platform={link.platform} className={cn('h-8 w-8', link.platform === 'tiktok' ? 'text-black' : 'text-white')} />
+                    <SocialIcon platform={link.platform} className={cn('h-8 w-8 text-white')} />
                 </div>
                 <span className="font-semibold">
                   {platformText[link.platform] || link.platform}
@@ -78,5 +88,3 @@ export default function PublicProfile({ content }: PublicProfileProps) {
     </div>
   );
 }
-
-    
