@@ -41,7 +41,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
                   platformGradients[link.platform] || 'bg-gray-700'
                 )}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-black/20">
                     <SocialIcon platform={link.platform} className="h-8 w-8" />
                 </div>
                 <span className="font-semibold capitalize">
