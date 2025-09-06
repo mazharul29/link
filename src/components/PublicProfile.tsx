@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { SiteContent } from '@/lib/types';
 import SocialIcon from './SocialIcon';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 interface PublicProfileProps {
   content: SiteContent;
@@ -10,67 +11,42 @@ interface PublicProfileProps {
 export default function PublicProfile({ content }: PublicProfileProps) {
   const { profile, links, heading, footerText, logoUrl } = content;
 
-  return (
-    <div className="flex min-h-full w-full flex-col bg-background font-sans text-foreground">
-      <header className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
-        {logoUrl ? (
-          <Image
-            src={logoUrl}
-            alt="Logo"
-            width={40}
-            height={40}
-            className="rounded-full"
-            data-ai-hint="logo"
-          />
-        ) : <div className="h-10 w-10"></div>}
-        <Link href="/admin" className="text-sm text-primary hover:underline">
-          Admin
-        </Link>
-      </header>
+  const platformGradients: { [key: string]: string } = {
+    instagram: 'instagram-gradient',
+    tiktok: 'tiktok-gradient',
+  };
 
+  return (
+    <div className="flex min-h-full w-full flex-col bg-transparent font-sans text-foreground">
       <main className="flex flex-1 flex-col items-center justify-center p-4 pt-20 text-center">
         <div className="w-full max-w-md">
-          <div className="mb-8 flex flex-col items-center">
-            <Image
-              src={profile.avatarUrl}
-              alt={profile.name}
-              width={100}
-              height={100}
-              className="mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
-              data-ai-hint="profile picture"
-            />
-            <h1 className="text-3xl font-bold text-primary">{profile.name}</h1>
-            <p className="mt-2 max-w-xs text-muted-foreground">{profile.bio}</p>
+           <div className="mb-12">
+            <h1 className="text-3xl font-bold tracking-wider text-white">CONNECT WITH ME</h1>
+            <div className="mt-4 flex justify-center space-x-2">
+              <div className="h-1 w-8 rounded-full bg-pink-500"></div>
+              <div className="h-1 w-8 rounded-full bg-purple-500"></div>
+              <div className="h-1 w-8 rounded-full bg-cyan-400"></div>
+            </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
             {links.map((link) => (
               <a
                 key={link.id}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex w-full items-center gap-4 rounded-lg bg-primary p-4 text-left text-primary-foreground transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                className={cn(
+                  'group flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-4 text-center text-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50',
+                  platformGradients[link.platform] || 'bg-gray-700'
+                )}
               >
-                <SocialIcon platform={link.platform} className="h-6 w-6" />
-                <span className="flex-1 font-semibold capitalize">
-                  {link.platform}
+                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                    <SocialIcon platform={link.platform} className="h-8 w-8" />
+                </div>
+                <span className="font-semibold capitalize">
+                  {link.platform === 'website' ? 'My Site' : link.platform}
                 </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5 opacity-70 transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
               </a>
             ))}
           </div>
@@ -79,6 +55,9 @@ export default function PublicProfile({ content }: PublicProfileProps) {
 
       <footer className="w-full p-4 text-center">
         <p className="text-sm text-muted-foreground">{footerText}</p>
+         <Link href="/admin" className="text-sm text-primary hover:underline mt-2 inline-block">
+          Admin Panel
+        </Link>
       </footer>
     </div>
   );

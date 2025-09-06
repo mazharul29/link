@@ -11,15 +11,15 @@ export default function Home() {
     return (
       <div className="flex min-h-screen w-full flex-col items-center justify-center bg-background p-4">
         <div className="w-full max-w-md space-y-6">
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-24 w-24 rounded-full" />
-            <Skeleton className="h-8 w-48" />
-            <Skeleton className="h-4 w-64" />
-          </div>
-          <div className="space-y-4">
-            <Skeleton className="h-12 w-full" />
-            <Skeleton className="h-12 w-full" />
-            <Skeleton className="h-12 w-full" />
+          <Skeleton className="h-8 w-64 mx-auto" />
+           <div className="flex justify-center space-x-2">
+              <Skeleton className="h-1 w-8" />
+              <Skeleton className="h-1 w-8" />
+              <Skeleton className="h-1 w-8" />
+            </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Skeleton className="aspect-square rounded-2xl" />
+            <Skeleton className="aspect-square rounded-2xl" />
           </div>
         </div>
       </div>
