@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 // In a real app, this would be in a separate file and call your backend.
 async function apiLogin(password: string): Promise<boolean> {
   // This is a mock login. Use a secure method in production.
-  return password === 'password';
+  return password === '29012012';
 }
 
 interface AuthContextType {

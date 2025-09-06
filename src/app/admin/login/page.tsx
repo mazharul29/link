@@ -63,7 +63,6 @@ export default function LoginPage() {
               ) : null}
               Log In
             </Button>
-            <p className="text-xs text-center text-muted-foreground pt-2">Hint: The password is 'password'.</p>
           </form>
         </CardContent>
       </Card>
