@@ -53,8 +53,21 @@ export default function PublicProfile({ content }: PublicProfileProps) {
         </div>
       </main>
 
-      <footer className="w-full p-4 text-center">
-        <p className="text-sm text-muted-foreground">{footerText}</p>
+       <footer className="w-full p-4">
+        {logoUrl && (
+          <div className="absolute bottom-4 left-4">
+            <Image
+              src={logoUrl}
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-md"
+            />
+          </div>
+        )}
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground">{footerText}</p>
+        </div>
       </footer>
     </div>
   );
