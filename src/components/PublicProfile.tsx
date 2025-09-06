@@ -68,7 +68,7 @@ export default function PublicProfile({ content }: PublicProfileProps) {
         </div>
       </main>
 
-       <footer className="w-full p-4">
+       <footer className="w-full p-4 bg-transparent">
         <div className="text-center">
           <p className="text-sm text-muted-foreground">{footerText}</p>
         </div>
