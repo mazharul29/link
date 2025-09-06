@@ -31,6 +31,8 @@ export const SOCIAL_PLATFORMS: SocialPlatform[] = [
   'tiktok',
   'linkedin',
   'youtube',
+  'twitter',
+  'github'
 ];
 
 export const ADMIN_BACKGROUNDS = [
