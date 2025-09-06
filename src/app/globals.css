@@ -94,6 +94,13 @@ body {
     animation: move-gradient 20s ease-in-out infinite alternate;
   }
 
+  .admin-bg {
+    background-color: #1a1a2e;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
   body::before {
     content: '';
     position: absolute;
