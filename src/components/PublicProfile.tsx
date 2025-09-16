@@ -69,10 +69,8 @@ export default function PublicProfile({ content }: PublicProfileProps) {
         </div>
       </main>
 
-       <footer className="w-full p-4 animate-fade-in-up bg-transparent" style={{ animationDelay: '1s' }}>
-        <div className="text-center">
+       <footer className="w-full p-4 text-center bg-card border-t border-border animate-fade-in-up" style={{ animationDelay: '1s' }}>
           <p className="text-sm text-foreground/70">{footerText}</p>
-        </div>
       </footer>
     </div>
   );
