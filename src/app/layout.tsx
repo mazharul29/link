@@ -5,7 +5,7 @@ import { SiteProvider } from '@/context/SiteContext';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'LinkPort',
+  title: 'MAZ',
   description: 'Your personal corner of the internet.',
 };
 
@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
